@@ -1,4 +1,38 @@
-venv/
+# --- Python ---
 __pycache__/
 *.pyc
-.env
+*.pyo
+*.pyd
+*.log
+
+# --- Virtualenv ---
+venv/
+venv312/
+ENV/
+env/
+.venv/
+
+# --- IDEs/Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Sistema Operacional ---
+.DS_Store
+Thumbs.db
+
+# --- Relatórios/Exportações ---
+*.csv
+*.xlsx
+*.xls
+*.tsv
+
+# --- Eel/Frontend ---
+node_modules/
+dist/
+build/
+
+# --- Outros ---
+*.bak
+*.tmp
