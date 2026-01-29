@@ -1,5 +1,5 @@
 import eel
-from src.file_manager import list_files
+from src import list_files, analyze_file
 
 eel.init('web')
 
@@ -9,4 +9,9 @@ def list_files_exposed(path="."):
     return list_files(path)
 
 
-eel.start('index.html', size=(800, 600), mode="default")
+@eel.expose
+def save_and_analyze(base64_content, filename):
+    return analyze_file(base64_content, filename)
+
+
+eel.start('index.html', size=(800, 600), port=8000, mode="default")
