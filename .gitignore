@@ -27,11 +27,19 @@ Thumbs.db
 *.xlsx
 *.xls
 *.tsv
+relatorio*.csv
+relatorio*.xlsx
 
 # --- Eel/Frontend ---
 node_modules/
 dist/
 build/
+
+# --- Testes ---
+coverage/
+jest-cache/
+jest-output/
+*.lcov
 
 # --- Outros ---
 *.bak
