@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Meu App Eel</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="/eel.js"></script>
-  <script src="script.js"></script>
+  <title>Gerenciador de Arquivos</title>
+  <script type="text/javascript" src="/eel.js"></script>
+  <script type="module" src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Listar Arquivos</h1>
+    <h1>Gerenciador de Arquivos</h1>
   </header>
+
   <main>
-    <section class="info">
-      <button onclick="listar()">Listar</button>
-    </section>
-    <section class="lista">
+    <section>
+      <button id="btnListar">Listar Arquivos</button>
       <ul id="lista"></ul>
+    </section>
+
+    <section>
+      <h2>Upload de Arquivo</h2>
+      <input type="file" id="fileInput" />
+      <button id="btnUpload">Enviar</button>
+    </section>
+
+    <section>
+      <h3>Resultado da Análise</h3>
+      <pre id="output"></pre>
     </section>
   </main>
 </body>
