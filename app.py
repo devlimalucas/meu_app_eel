@@ -1,18 +1,17 @@
 import eel
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-pasta = os.getenv("APP_FOLDER", ".")
+from src import list_files, analyze_file
 
 eel.init('web')
 
-@eel.expose
-def listar_arquivos(pasta=pasta):
-    return os.listdir(pasta)
 
 @eel.expose
-def get_env_folder():
-    return pasta
+def list_files_exposed(path="."):
+    return list_files(path)
 
-eel.start('index.html', size=(800, 600), mode='default')
+
+@eel.expose
+def save_and_analyze(base64_content, filename):
+    return analyze_file(base64_content, filename)
+
+
+eel.start('index.html', size=(800, 600), port=8000, mode="default")
